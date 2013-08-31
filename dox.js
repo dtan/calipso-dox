@@ -205,7 +205,7 @@ function document(req, res, template, block, next) {
   if (templateFile && !library) {
 
     // Locate it (as we are uncertain of the path)
-    fs.readdirSync(calipso.app.path + "/" + calipso.modules[module].path + "/templates/").forEach(function(actualTemplate) {
+    fs.readdirSync(calipso.app.path() + "/" + calipso.modules[module].path + "/templates/").forEach(function(actualTemplate) {
       if (actualTemplate.split(".")[0] === templateFile) {
         filePath = calipso.modules[module].path + "/templates/" + actualTemplate;
       }
@@ -218,14 +218,14 @@ function document(req, res, template, block, next) {
   if (library) {
 
     // Include a core library
-    filePath = "lib/" + library + ".js";
+    filePath = path.join(calipso.app.path(), "lib/core/" + library + ".js");
     fileType = "library";
 
   }
 
   // Attempt to read the file from disk
   var source;
-  source = fs.readFileSync(calipso.app.path + "/" + filePath, 'utf8');
+  source = fs.readFileSync(filePath, 'utf8');
 
   // Run it through dox
   var output = [];
