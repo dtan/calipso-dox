@@ -85,6 +85,30 @@ function list(req, res, template, block, next) {
       }
     },
     {
+      name:'Blocks',
+      about: {
+        description:'This class controls the storage and retrieval of blocks rendered via the Router, e.g. specific pieces of output.',
+        author:'cliftonc',
+        version:calipso.app.version
+      }
+    },
+    {
+      name:'Cache',
+      about: {
+        description:' This is the core Calipso library that enables caching to be turned on that will cache both module and full page output.',
+        author:'cliftonc',
+        version:calipso.app.version
+      }
+    },
+    {
+      name:'Configureation',
+      about: {
+        description:'Core module to take care of configuration.',
+        author:'cliftonc',
+        version:calipso.app.version
+      }
+    },
+    {
       name:'Date',
       about: {
         description:'Core calipso library that wraps the jQuery UI Datepicker date functions for use across the framework.',
@@ -96,6 +120,14 @@ function list(req, res, template, block, next) {
       name:'Event',
       about: {
         description:'Module event handlers and events, used to drive initiation and routing of dependent modules.',
+        author:'cliftonc',
+        version:calipso.app.version
+      }
+    },
+    {
+      name:'Field',
+      about: {
+        description:'This library adds a field class to calipso, and provides an api for field modules.',
         author:'cliftonc',
         version:calipso.app.version
       }
@@ -125,9 +157,25 @@ function list(req, res, template, block, next) {
       }
     },
     {
+      name:'Logging',
+      about: {
+        description:'This module exposes the functions that configures the logging of calipso.',
+        author:'cliftonc',
+        version:calipso.app.version
+      }
+    },
+    {
       name:'Menu',
       about: {
         description:'Menu management and rendering class.',
+        author:'cliftonc',
+        version:calipso.app.version
+      }
+    },
+    {
+      name:'Permission',
+      about: {
+        description:'This library adds a permissions class to the router, defining functions that are used by the router to control access.',
         author:'cliftonc',
         version:calipso.app.version
       }
@@ -141,6 +189,14 @@ function list(req, res, template, block, next) {
       }
     },
     {
+      name:'Storage',
+      about: {
+        description:'This library provides a few simple functions that can be used to help manage MongoDB and Mongoose.',
+        author:'cliftonc',
+        version:calipso.app.version
+      }
+    },
+    {
       name:'Table',
       about: {
         description:'Table rendering library.',
@@ -149,9 +205,17 @@ function list(req, res, template, block, next) {
       }
     },
     {
-      name:'Theme',
+      name:'Themes',
       about: {
         description:'Theme management library, responsible for all rendering.',
+        author:'cliftonc',
+        version:calipso.app.version
+      }
+    },
+    {
+      name:'Utils',
+      about: {
+        description:'Calipso core utilities.',
         author:'cliftonc',
         version:calipso.app.version
       }
